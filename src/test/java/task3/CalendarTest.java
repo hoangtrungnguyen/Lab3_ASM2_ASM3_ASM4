@@ -1,3 +1,5 @@
+package task3;
+
 import jdk.jfr.Description;
 import org.example.Calendar;
 import org.junit.jupiter.api.Test;
@@ -41,8 +43,6 @@ public class CalendarTest {
         assertFalse(isLeapYear);
     }
 
-
-
     @Test
     @Description("Abnormal case, leap year, day = 29, month = February")
     void isDayValid_01()   {
@@ -75,5 +75,4 @@ public class CalendarTest {
         boolean isValid = Calendar.isValidDate(2001, 0, 12);
         assertFalse(isValid);
     }
-
 }
