@@ -53,7 +53,7 @@ public class Demo {
      */
     @Test
     void assertNotSameDemo(){
-        assertNotSame("a","a");
+        assertNotSame("b","a");
     }
 
     /**
@@ -86,7 +86,14 @@ public class Demo {
      */
      @Test
      void failDemo(){
-        fail("Message");
+         try {
+             if(true){
+                 throw new Exception("Fail demo");
+             }
+             fail("Expected exception was not thrown");
+         } catch (Exception e) {
+             assertNotNull(e);
+         }
      }
 
     /***
